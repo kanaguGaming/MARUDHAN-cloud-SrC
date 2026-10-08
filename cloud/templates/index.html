@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AADI - Marudhan Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="glass-header">
+            <div class="logo">
+                <h1>MARUDHAN <span>AADI</span></h1>
+                <p>Advanced Agri-System Digital Interface</p>
+            </div>
+            <div class="status-indicator">
+                <div class="pulse-dot"></div>
+                <span>Digital Twin Live</span>
+            </div>
+        </header>
+
+        <main class="grid-layout">
+            <section class="card stats-card" id="mann-stats">
+                <h2>MANN Telemetry</h2>
+                <div class="stat-grid">
+                    <div class="stat-box">
+                        <span class="label">Temperature</span>
+                        <span class="value" id="temp-val">-- °C</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="label">Humidity</span>
+                        <span class="value" id="hum-val">-- %</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="label">Soil Moisture</span>
+                        <span class="value" id="soil-val">-- %</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card arivu-card">
+                <h2>ARIVU AI Decision Engine</h2>
+                <div class="arivu-content">
+                    <div class="ai-status">
+                        <span class="label">Crop Health Status</span>
+                        <span class="value highlight" id="health-val">Waiting for data...</span>
+                    </div>
+                    <div class="ai-recommendation">
+                        <h3>Recommendation</h3>
+                        <p id="rec-val">Connect device to receive AI recommendations.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="card logs-card">
+                <h2>Live Data Stream</h2>
+                <div class="terminal" id="data-log">
+                    <p class="sys-msg">Initializing digital twin connection...</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="/static/js/dashboard.js"></script>
+</body>
+</html>
